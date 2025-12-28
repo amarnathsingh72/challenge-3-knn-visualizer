@@ -27,7 +27,13 @@ public class MainPanel extends JPanel {
     }
     
     private void showDemo() {
-        
-        JOptionPane.showMessageDialog(this, "k-NN Demo Coming Soon!");
-    }
+    JFrame canvasFrame = new JFrame("k-NN Demo - Right-click: Blue, Left-click: Red");
+    canvasFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    KNNCanvas canvas = new KNNCanvas();
+    canvasFrame.add(canvas);
+    canvasFrame.pack();
+    canvasFrame.setLocationRelativeTo(null);
+    canvasFrame.setVisible(true);
+}
+
 }
